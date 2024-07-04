@@ -1,3 +1,14 @@
+/* selectores de clase 
+    comienzan con un punto
+    ej: .navbar-brand
+*/
+
+
+/* selectores de etiqueta 
+    comienzan con el nombre de la etiqueta
+    ej: img
+*/
+
 /* tamaño del logo */
 .navbar-brand img {
     width: 10%;
