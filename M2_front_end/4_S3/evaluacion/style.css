@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+
+/* selector de clase inicia con . */
+.button-container {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.primary-btn  {
+    background-color: #3498db;
+}
+
+.secondary-btn{
+    background-color: #2ECC71;
+}
+
+.success-btn{
+    background-color: #27AE60;
+}
+
+.danger-btn{
+    background-color: #E74C3C;
+}
