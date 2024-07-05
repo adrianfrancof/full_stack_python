@@ -10,18 +10,28 @@
 <body> <!-- cuerpo o estructura del documento -->
 
     <!-- tabla -->
-    <table> 
+    <table id="tabla" border="2"> 
         <tr> <!-- fila o table row -->
-          <td>ROJO</td> <!-- celda o table data -->
-          <td>BLANCO</td>
-          <td>VERDE</td>
-          <td>GRIS</td>
+          <td class="rojo">ROJO</td> <!-- celda o table data -->
+          <td class="blanco">BLANCO</td>
+          <td class="verde">VERDE</td>
+          <td class="gris">GRIS</td>
         </tr> <!-- final fila -->
         <tr> <!-- fila -->
-          <td>CAFE</td>
-          <td>AZUL</td>
-          <td>VIOLETA</td>
+          <td class="cafe" rowspan="2">CAFE</td>
+          <td class="azul">AZUL</td>
+          <td class="violeta" colspan="2">VIOLETA</td>
         </tr> <!-- final fila table row-->
+        <tr>
+            <td class="rosado">ROSADO</td>
+            <td class="amarillo" rowspan="2">AMARILLO</td>
+            <td class="turquesa">TURQUESA</td>
+        </tr>
+        <tr>
+            <td class="naranja">NARANJO</td>
+            <td class="purpura">PURPURA</td>
+            <td class="negro">NEGRO</td>
+        </tr>
     </table> 
     
 </body>
