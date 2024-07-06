@@ -23,3 +23,64 @@ body {
 .gris{background-color: gray; height: 400px;}
 
 /* medium */
+@media (min-width: 501px) and (max-width: 750px) {
+    .rojo{
+        display: inline-block;
+    }
+
+    .azul{
+        height: 200px;
+    }
+    
+    .azul, .rojo{
+        width: 32%;
+        display: inline-block;
+    }
+
+    .verde{
+        width: 34%;
+        display: inline-block;
+    }
+
+    .morado{
+        width: 60%;
+        display: inline-block;
+    }
+
+    .gris{
+        width: 39%;
+        display: inline-block;
+    }
+}
+
+/* large */
+@media (min-width: 751px) {
+    .rosado{
+        height: 100px;
+    }
+
+    .azul{
+        height: 400px;
+    }
+
+    .rojo{
+        display: block;
+        width: 34%;
+    }
+
+    .morado{
+        display: block;
+        width: 32%;
+        height: 200px;
+    }
+
+    .gris{
+        width: 34%;
+        height: 200px;
+    }
+
+    .rojo, .morado, .gris{
+        float: left;
+        /* display: inline-block; */
+    }
+}
