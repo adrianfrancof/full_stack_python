@@ -1,0 +1,23 @@
+/* selector universal */
+/* formateo de los elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+/* small */
+.rosado {background-color: pink; height: 200px;}
+
+.verde {background: green; height: 200px;}
+
+.azul {background: blue; height: 100px;}
+
+.rojo {background-color: red;}
+
+.morado{background-color: purple;}
+
+.gris{background-color: gray; height: 400px;}
