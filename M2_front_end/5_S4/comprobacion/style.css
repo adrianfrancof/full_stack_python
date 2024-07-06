@@ -16,8 +16,10 @@ body {
 
 .azul {background: blue; height: 100px;}
 
-.rojo {background-color: red;}
+.rojo {background-color: red; height: 200px; display: none;}
 
-.morado{background-color: purple;}
+.morado{background-color: purple; height: 400px; display: none;}
 
 .gris{background-color: gray; height: 400px;}
+
+/* medium */
