@@ -7,9 +7,17 @@
 
 */
 
-img{
+.gallery{
+    text-align: center;
+}
+.gallery-item {
+    display: inline-block;
+    margin: 20px;
+}
+
+img {
     width: 100%;
-    height: auto;
+    border-radius: 8px;
 }
 
 @media(min-width:1200px) {
