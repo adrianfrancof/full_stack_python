@@ -11,7 +11,7 @@
 
       <!-- formulario https://getbootstrap.com/docs/5.3/forms/validation/#custom-styles -->
       <section class="container mt-5">
-        <form action="pagina2.html" class="row g-3 needs-validation">
+        <form action="pagina2.html" class="row g-3 needs-validation" novalidate>
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="validationCustom01" value="Marcos" required>
@@ -81,5 +81,26 @@
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        'use strict'
+  
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+  
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+  
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+    </script>
   </body>
 </html>
