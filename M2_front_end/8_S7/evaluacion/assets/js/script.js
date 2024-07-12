@@ -10,7 +10,7 @@ var opcion = prompt("¡Hola! Soy Eva, tu asistente virtual del Servicio al Clien
 
 //FUNCIONES
 // estructura de control switch case, donde key es el valora evaluar y value los valores para cada caso
-switch (opcion) {
+switch (opcion) { //inicio switch case
     case "1":
         boletasPagos(); //llamada o invocacion a una funcion
         break; // para salir del caso y terminar el switch case
@@ -26,9 +26,9 @@ switch (opcion) {
     default:
         alert("La opción ingresada no es válida.")
         break;
-}
+} //fin switch case
 
-function boletasPagos() {
+function boletasPagos() { //inicio de la funcion
     var ingreso = prompt("Seleccione una opción\n"+
         "1.- Ver boleta\n"+
         "2.- Pagar cuenta"
@@ -41,9 +41,9 @@ function boletasPagos() {
     } else {
         alert("Opción ingresada no es valida")
     }
-}
+} //fin de la funcion
 
-function reportarProblemas() {
+function reportarProblemas() { //inicio de la funcion
     var ingreso = prompt("Seleccione una opción\n"+
         "1.- Problemas con la señal\n"+
         "2.- Problemas con las llamadas"
@@ -55,9 +55,9 @@ function reportarProblemas() {
     } else {
         alert("Opción ingresada no es valida")
     }
-}
+} //fin de la funcion
 
-function ofertaComercial() {
+function ofertaComercial() { //inicio de la funcion
     var ingreso = prompt("Mentel tiene una oferta comercial acorde a tus necesidades!\n"+
         "Para conocer más información y ser asesorado personalmente por un ejecutivo.\n"+
         "Escribe SI, si deseas ser contactado por un ejecutivo.\n"+
@@ -72,11 +72,11 @@ function ofertaComercial() {
     } else {
         alert("Opción ingresada no es valida")
     }
-}
+} //fin de la funcion
 
-function otrasConsultas() {
+function otrasConsultas() { //inicio de la funcion
     var ingreso = prompt("A continuación escriba su consulta")
     alert("Estimado usuario, su consulta: " + ingreso +
         " Ha sido ingresada con éxito. Pronto será contactado por uno de nuestros ejecutivos"
     )
-}
+} //fin de la funcion
