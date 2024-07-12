@@ -19,7 +19,10 @@ switch (opcion) {
         break;
     case "3":
         ofertaComercial();
+    case "4":
+        otrasConsultas();
     default:
+        alert("La opción ingresada no es válida.")
         break;
 }
 
@@ -67,4 +70,11 @@ function ofertaComercial() {
     } else {
         alert("Opción ingresada no es valida")
     }
+}
+
+function otrasConsultas() {
+    var ingreso = prompt("A continuación escriba su consulta")
+    alert("Estimado usuario, su consulta: " + ingreso +
+        " Ha sido ingresada con éxito. Pronto será contactado por uno de nuestros ejecutivos"
+    )
 }
