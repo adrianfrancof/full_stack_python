@@ -8,8 +8,7 @@ var opcion = prompt("¡Hola! Soy Eva, tu asistente virtual del Servicio al Clien
     "3.- Oferta comercial  \n" +
     "4.- Otras consultas")
 
-//FUNCIONES
-// estructura de control switch case, donde key es el valora evaluar y value los valores para cada caso
+// estructura de control switch case, donde key (opcion) es el valora evaluar y value ("1") los valores para cada caso
 switch (opcion) { //inicio switch case
     case "1":
         boletasPagos(); //llamada o invocacion a una funcion
