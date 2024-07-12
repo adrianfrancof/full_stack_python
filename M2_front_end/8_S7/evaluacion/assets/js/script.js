@@ -12,7 +12,7 @@ var opcion = prompt("¡Hola! Soy Eva, tu asistente virtual del Servicio al Clien
 // estructura de control switch case, donde key es el valora evaluar y value los valores para cada caso
 switch (opcion) {
     case "1":
-        boletasPagos();
+        boletasPagos(); //llamada o invocacion a una funcion
         break; // para salir del caso y terminar el switch case
     case "2":
         reportarProblemas();
