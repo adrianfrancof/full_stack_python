@@ -26,3 +26,11 @@ console.log("Hola, Mundo");
 
 // leer en una ventana emergente, con la funcion prompt(variable)
 var nombreIngresado = prompt("Ingrese su nombre");
+
+//funciones, estructuras de codigo que realizan alguna tarea o ejecutan un bloque de codigo
+function suma(a, b){ // funcion llamada suma que recibe dos parametros de entrada a y b, separados por coma
+    //el cuerpo o proceso de la funcion
+    return a + b; // retorna la suma de a y b
+}
+
+var resultado = suma(2,3);
