@@ -16,11 +16,13 @@ switch (opcion) {
         break; // para salir del caso y terminar el switch case
     case "2":
         reportarProblemas();
-        break;
+        break; // si falta un break pasa al siguiente caso
     case "3":
         ofertaComercial();
+        break;
     case "4":
         otrasConsultas();
+        break;
     default:
         alert("La opción ingresada no es válida.")
         break;
