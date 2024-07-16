@@ -65,13 +65,27 @@ function menu(usuario) { //"Seleccione que desea hacer: 1.- Ver saldo. 2.- 3.-"
             case "1": //ver saldo
                 alert("Su saldo es: " + usuario.saldo)
                 break;
-            case "2": //realizar deposito
+
+            case "2": //realizar giro
+                var retiro = prompt("Su saldo actual es: "+ usuario.saldo + " Ingrese el monto que desea girar:")
+                if (retiro > usuario.saldo) {
+                    alert("Saldo insuficiente")
+                } else {
+                    usuario.saldo -= retiro // acumulación de la resta del retiro al saldo del usuario
+                    alert("Retiro completado, su nuevo saldo es: " + usuario.saldo)
+                }
                 break;
-            case "3":
-                break    
-            case "4":
+
+            case "3": //realizar deposito
+                var deposito = prompt("Su saldo actual es: "+ usuario.saldo + " Ingrese el monto que desea depositar:")
+                usuario.saldo += deposito
+                break  
+
+            case "4": //salir
+                alert("Hasta luego!")
                 break;
-            default:
+            default: //caso que se muestra por default si no cumple ningún caso
+                alert("Opción incorrecta")
                 break;
         }
     } while (opcion != "4");
