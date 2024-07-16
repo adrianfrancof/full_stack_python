@@ -2,6 +2,32 @@
 // un identificador, una clave y un saldo en su cuenta.
 // Se debe contar con al menos 3 clientes registrados.
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Llamada a funciones iniciales, que desencadenan la ejecución del programa
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const listaClientes = crearDatosPrograma()
+
+//Cuando se ingrese el identificador y la clave, 
+// se revisará si coincide con alguno de los clientes registrados. 
+// Si no coincide, se mostrará un mensaje de error.
+
+
+const loginResult = login()
+
+// recorrer la lista con clientes
+var usuario = busquedaUsuario(loginResult, listaClientes)
+
+//validacion si el usuario fue encontrado
+validacionUsuario(usuario)
+
+menu(usuario) //llamada a funcion menu cuando el cliente existe 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Creación de funciones
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // nombre | rut | clave | saldo
 //funcion constructora para instanciar objeto Cliente
 function Cliente(nombre, rut, clave, saldo) {
@@ -11,23 +37,45 @@ function Cliente(nombre, rut, clave, saldo) {
     this.saldo = saldo
 }
 
-crearDatosPrograma()
+function crearDatosPrograma() {
+    // declaracion para crear un objeto cliente
+    var cliente1 = new Cliente("Fulanito Perez", "270000001", "0000", 100000)
+    var cliente2 = new Cliente("Maria Delgado", "270000002", "0001", 200000)
+    var cliente3 = new Cliente("Jose Feliciano", "270000003", "0002", 300000)
 
-//Cuando se ingrese el identificador y la clave, 
-// se revisará si coincide con alguno de los clientes registrados. 
-// Si no coincide, se mostrará un mensaje de error.
+    return [cliente1, cliente2, cliente3] //lista para recorrer y buscar
+}
 
+function login() {
+    alert("Bienvenido a Banca en Línea")
+    const inputIdentificador = prompt("Ingrese su identificador");
+    const inputPassword = prompt("Ingrese su password");
 
-var identificador
-var password
+    return { identificador: inputIdentificador, password: inputPassword };
+}
 
-login(identificador, password)
+function busquedaUsuario(loginResult, listaClientes) {
+    // recorrer la lista con clientes
+    const { identificador, password } = loginResult;
 
-// recorrer la lista con clientes
-var usuario = busquedaUsuario(identificador, password)
+    var usuario;
+    for (const iterator of listaClientes) {
+        if (iterator.rut === identificador && iterator.clave === password) {
+            usuario = iterator; //cliente existe
+            break;
+        }
+    }
+    return usuario;  
+}
 
-//validacion si el usuario fue encontrado
-validacionUsuario(usuario)
+function validacionUsuario(usuario) {
+    if (usuario) {
+        alert("Bienvenido " + usuario.nombre)
+    }else {
+        alert("Datos incorrectos")
+        throw new Error("Datos incorrectos")
+    }
+}
 
 // funcion menu
 function menu(usuario) { //"Seleccione que desea hacer: 1.- Ver saldo. 2.- 3.-"
@@ -86,42 +134,4 @@ function salir(usuario) {
     alert("Hasta luego! " + usuario.nombre)
     
 }
-
-function validacionUsuario(usuario) {
-    if (usuario) {
-        alert("Bienvenido " + usuario.nombre)
-        menu(usuario) //llamada a funcion menu cuando el cliente existe 
-    }else {
-        alert("Datos incorrectos")
-    }
-}
-
-function busquedaUsuario(identificador, password) {
-    // recorrer la lista con clientes
-    var usuario;
-    for (const iterator of listaClientes) {
-        if (iterator.rut === identificador && iterator.clave === password) {
-            usuario = iterator; //cliente existe
-            break;
-        }
-    }
-    return usuario;
-    
-}
-
-function login(identificador, password ) {
-    alert("Bienvenido a Banca en Línea")
-    identificador = prompt("Ingrese su identificador") // ingreso de valores
-    password = prompt("Ingrese su password") // ingreso de valores
-}
-
-function crearDatosPrograma() {
-    // declaracion para crear un objeto cliente
-    var cliente1 = new Cliente("Fulanito Perez", "270000001", "0000", 100000)
-    var cliente2 = new Cliente("Maria Delgado", "270000002", "0001", 200000)
-    var cliente3 = new Cliente("Jose Feliciano", "270000003", "0002", 300000)
-
-    return [cliente1, cliente2, cliente3] //lista para recorrer y buscar
-}
-
 
