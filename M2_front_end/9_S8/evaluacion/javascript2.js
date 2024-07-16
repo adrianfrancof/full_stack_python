@@ -2,6 +2,10 @@
 // un identificador, una clave y un saldo en su cuenta.
 // Se debe contar con al menos 3 clientes registrados.
 
+//Cuando se ingrese el identificador y la clave, 
+// se revisará si coincide con alguno de los clientes registrados. 
+// Si no coincide, se mostrará un mensaje de error.
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Llamada a funciones iniciales, que desencadenan la ejecución del programa
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -9,20 +13,13 @@
 
 const listaClientes = crearDatosPrograma()
 
-//Cuando se ingrese el identificador y la clave, 
-// se revisará si coincide con alguno de los clientes registrados. 
-// Si no coincide, se mostrará un mensaje de error.
-
-
 const loginResult = login()
 
-// recorrer la lista con clientes
 var usuario = busquedaUsuario(loginResult, listaClientes)
 
-//validacion si el usuario fue encontrado
 validacionUsuario(usuario)
 
-menu(usuario) //llamada a funcion menu cuando el cliente existe 
+menu(usuario)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Creación de funciones
