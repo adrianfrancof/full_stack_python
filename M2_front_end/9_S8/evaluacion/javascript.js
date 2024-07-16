@@ -67,7 +67,7 @@ function menu(usuario) { //"Seleccione que desea hacer: 1.- Ver saldo. 2.- 3.-"
                 break;
 
             case "2": //realizar giro
-                var retiro = prompt("Su saldo actual es: "+ usuario.saldo + " Ingrese el monto que desea girar:")
+                var retiro = parseInt(prompt("Su saldo actual es: "+ usuario.saldo + " Ingrese el monto que desea girar:"))
                 if (retiro > usuario.saldo) {
                     alert("Saldo insuficiente")
                 } else {
@@ -77,9 +77,9 @@ function menu(usuario) { //"Seleccione que desea hacer: 1.- Ver saldo. 2.- 3.-"
                 break;
 
             case "3": //realizar deposito
-                var deposito = prompt("Su saldo actual es: "+ usuario.saldo + " Ingrese el monto que desea depositar:")
+                var deposito = parseInt(prompt("Su saldo actual es: "+ usuario.saldo + " Ingrese el monto que desea depositar:"))
                 usuario.saldo += deposito
-                break  
+                break;
 
             case "4": //salir
                 alert("Hasta luego!")
