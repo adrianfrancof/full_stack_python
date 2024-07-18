@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+
+<h2 onclick="changeText(this)" onmouseout="changeText2(this)">Click on this text!</h2>
+
+<script>
+function changeText(id) {
+  id.innerHTML = "Ooops!";
+}
+
+function changeText2(id) {
+  id.innerHTML = "Click on this text!";
+}
+</script>
+
+</body>
+</html>
