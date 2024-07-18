@@ -1,3 +1,6 @@
+// https://www.w3schools.com/js/js_htmldom_document.asp
+
+
 function mostrarMensaje(){ 
     document.getElementById('caja2').style.display = "block"; 
 } 

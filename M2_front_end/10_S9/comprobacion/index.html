@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="caja1 container">
+        <div id="text1">
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, accusantium distinctio accusamus
+                totam rem at ex alias labore veniam aliquam nisi recusandae esse voluptatum culpa veritatis enim porro
+                dolor quis?</p>
+        </div>
+        <div id="text2">
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, accusantium distinctio accusamus
+                totam rem at ex alias labore veniam aliquam nisi recusandae esse voluptatum culpa veritatis enim porro
+                dolor quis?</p>
+        </div>
+    </div>
+    <div id="caja2"> <img src="Pac-Man_Cutscene.svg.png" id="img" width="20%" alt=""> </div>
+    <div id="caja3">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente laudantium aliquid rem consequatur eius
+            nemo alias provident sunt et voluptate in aut, quas hic quia dolores, corrupti voluptatem reiciendis facere.
+        </p>
+    </div>
+
+    <script>
+        // obteniendo los elementos
+        let caja1 = document.querySelector('.caja1');
+        let text1 = document.getElementById('text1');
+        let text2 = document.getElementById('text2');
+        let caja2 = document.getElementById('caja2');
+        let caja3 = document.getElementById('caja3');
+        let img   = document.getElementById('img');
+        
+        text2.style.display = 'none';
+
+        text1.addEventListener('mouseover', () => {
+            text2.style.display = 'block';
+        });
+
+        text1.addEventListener('mouseout', () => {
+            text2.style.display = 'none';
+        });
+
+    </script>
+</body>
+
+</html>

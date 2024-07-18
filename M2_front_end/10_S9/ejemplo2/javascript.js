@@ -1,3 +1,5 @@
+// https://www.w3schools.com/jsref/dom_obj_event.asp
+
 document.addEventListener('DOMContentLoaded', function () {
     const caja1 = document.getElementById('caja1');
     const caja2 = document.getElementById('caja2');
