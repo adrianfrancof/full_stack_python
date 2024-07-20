@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="caja1 container">
+        <div id="text1">
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, accusantium distinctio accusamus
+                totam rem at ex alias labore veniam aliquam nisi recusandae esse voluptatum culpa veritatis enim porro
+                dolor quis?</p>
+        </div>
+        <div id="text2">
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, accusantium distinctio accusamus
+                totam rem at ex alias labore veniam aliquam nisi recusandae esse voluptatum culpa veritatis enim porro
+                dolor quis?</p>
+        </div>
+    </div>
+    <div id="caja2"> <img src="Pac-Man_Cutscene.svg.png" id="img" width="20%" alt=""> </div>
+    <div id="caja3">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente laudantium aliquid rem consequatur eius
+            nemo alias provident sunt et voluptate in aut, quas hic quia dolores, corrupti voluptatem reiciendis facere.
+        </p>
+    </div>
+
+    <script>
+        // obteniendo los elementos
+        // let caja1 = document.querySelector('.caja1');
+        // let text1 = document.getElementById('text1');
+        // let text2 = document.getElementById('text2');
+        // let caja2 = document.getElementById('caja2');
+        // let caja3 = document.getElementById('caja3');
+        // let img   = document.getElementById('img');
+        
+        // text2.style.display = 'none';
+
+        // text1.addEventListener('mouseover', () => {
+        //     text2.style.display = 'block';
+        // });
+
+        // text1.addEventListener('mouseout', () => {
+        //     text2.style.display = 'none';
+        // });
+
+        // JQuery https://www.w3schools.com/jquery/jquery_ref_effects.asp
+        $(document).ready(function(){ 
+            //mouse sobre elemento con id text1 muestra elemento con id text2
+            $("#text1").mouseover(function(){
+                $(this).css('background-color', 'magenta')
+                $("#text2").show();
+            });
+
+            //mouse al salir del elemento con id text1 esconde elemento con id text2
+            $("#text1").mouseout(function(){
+                $(this).css('background-color', 'yellow')
+                $("#text2").hide();
+            });
+
+            //agrandar la imagen con doble click
+            $("#img").dblclick(function(){
+                $(this).css({width: '100%'});
+            });
+
+            //achicar la imagen cuando se sale de ella con el mouse
+            $("#img").mouseout(function(){
+                $("#img").css({width: '20%'});
+            });
+
+            //doble click para cambiar el tamaño del texto
+            $("#caja3").dblclick(function(){
+                $(this).css({fontSize: 'xx-large'});
+            });
+        });
+
+    </script>
+</body>
+
+</html>
