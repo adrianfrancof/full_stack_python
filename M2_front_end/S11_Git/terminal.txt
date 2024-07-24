@@ -1,0 +1,17 @@
+** comandos básicos para uso de la terminal o consola
+clear                          | limpiar terminal bash
+pwd                            | ver ubicación
+ls -la                         | ver archivos y detalle de esos archivos
+ls                             | lista simple de archivos
+cd nombreCarpeta               | cambiar carpeta
+cd ..                          | volver atras una carpeta
+mkdir nombreCarpeta            | crear directorio o carpeta
+rm -rf nombreCarpeta           | eliminar directorio o carpeta
+touch nombreArchivo.extension  | crear un archivo en terminal
+rm nombreArchivo.extension     | eliminar un archivo en terminal
+rm -rf nombreArchivo.extension | eliminar un archivo sin necesidad de permisos
+
+** pasos para crear una carpeta y archivo
+1.- abrir un git bash (terminal de git) y situarse en una carpeta de trabajo
+2.- mkdir prueba-git |crear una carpeta prueba-git
+3.- touch index.html |crear archivo index.html

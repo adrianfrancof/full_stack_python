@@ -1,0 +1,37 @@
+1.- crear carpeta viajes, que será la carpeta del repositorio
+
+2.- agregar index.html y carpeta img dentro de la carpeta viajes
+
+3.- abrir carpeta viajes en visual studio code
+
+4.- abrir terminal en visual studio code
+
+5.- git status
+
+6.- git init | inicializar repositorio
+
+7.- git add . | agregar los documentos al stage
+
+8.- git commit -m "inicializando repositorio"
+
+9.- git branch -m main | renombrar rama a main
+
+10.- abrir GitHub
+
+11.- crear repositorio viajes
+
+12.- asociar el repositorio remoto al repositorio local
+git remote add origin repoUrl
+git remote add origin https://github.com/{username}/{reponame}.git
+
+13.- subir los cambios al repositorio remoto
+git push -u origin ramaDestino
+git push -u origin main
+
+14.- ir a settings del repositorio
+
+15.- navegar en la barra lateral izquierda a pages
+
+16.- seleccionar rama main para desplegar github pages
+
+

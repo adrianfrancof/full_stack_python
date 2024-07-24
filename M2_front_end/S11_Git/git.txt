@@ -1,0 +1,44 @@
+** comandos de configuración
+git config --global user.name "userName"          | configurar usuario de los commits
+git config --global user.email "correo@gmail.com" | configurar correo
+git config --list                                 | ver lista de configuraciones de git
+
+** comandos para iniciar repositorio
+git status                                        | ver el status de un repositorio
+git init                                          | inicializar repositorio
+
+** comandos para guardar archivos y realizar commit
+git status                                        | ver el status de un repositorio
+git add .                                         | agregar todos los archivos al stage
+git commit -m "comentario"                        | realizar comentario
+
+** comandos para crear repositorio en github y asociarlo a repositorio local
+
+* si ya tenemos el repositorio local
+git branch -m main
+git remote add origin https://github.com/{username}/{reponame}.git
+git push -u origin main
+
+* si no tenemos el repositorio local y queremos crearlo
+git init
+git add .
+git commit -m "inicializando repositorio"
+git branch -m main
+git remote add origin https://github.com/{username}/{reponame}.git
+git push -u origin main
+
+** comandos para subida de un proyecto html estatico a github pages
+1.- ir a settings del repositorio
+2.- navegar en la barra lateral izquierda a pages
+3.- seleccionar rama main para desplegar github pages
+
+git status                                        | ver el status de un repositorio
+git config --global user.name "userName"          | configurar usuario de los commits
+git config --global user.email "correo@gmail.com" | configurar correo
+git config --list                                 | ver lista de configuraciones de git
+git init                                          | inicializar repositorio
+git add .                                         | agregar todos los archivos al stage
+git add nombreArchivo                             |agregar un solo archivo
+git rm --cached nombreArchivo                     | sacar archivo del stage
+git commit -m "comentario"                        | realizar comentario
+git log --oneline                                 | ver y listar comentarios realizados
