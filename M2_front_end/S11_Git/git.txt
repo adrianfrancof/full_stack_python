@@ -43,4 +43,4 @@ git rm --cached nombreArchivo                     | sacar archivo del stage
 git commit -m "comentario"                        | realizar comentario
 git log --oneline                                 | ver y listar comentarios realizados
 git reset HEAD~1                                  | eliminar ultimo commit local
-git rever {idCommit}                              | revertir cambio y crea un nuevo comentario
+git revert {idCommit}                             | revertir cambio y crea un nuevo comentario
