@@ -9,12 +9,15 @@ py --version
 ```
 
 ##### ** Salir de la consola interactiva de python **
+
 ```
 exit()
 ```
 
 ##### ** Ejecutar la consola interactiva de python **
+
 - La función de la consola interactiva es presentar un entorno de ejecución y prueba
+
 ```
 python
 python3
@@ -22,16 +25,26 @@ py
 ```
 
 #### ** Instalador de paquetes pip **
+
 - Conocer versión del instalador de paquetes de python
+
 ```
 pip -V
 pip3 -V
 python -m pip --version
 python3 -m pip --version
 ```
+
 - Instalar pip
+
 ```
 python -m ensurepip --upgrade
+```
+
+- actualizar pip
+
+```
+python.exe -m pip install --upgrade pip
 ```
 
 ```
@@ -59,32 +72,32 @@ Commands:
 ```
 
 ##### Extensiones de Visual Studio Code
-- autopep8
-    ```
-    Name: autopep8
-    Id: ms-python.autopep8
-    Description: Formatting support for Python files using the autopep8 formatter.
-    https://marketplace.visualstudio.com/items?itemName=ms-python.autopep8
-    ```
-- intelliCode
-    ```
-    Name: IntelliCode
-    Id: VisualStudioExptTeam.vscodeintellicode
-    Description: AI-assisted development
-    https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode
-    ```
-- Python
-    ```
-    Name: Python
-    Id: ms-python.python
-    Description: Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more.
-    https://marketplace.visualstudio.com/items?itemName=ms-python.python
-    ```
-- Python Environment Manager
-    ```
-    Name: Python Environment Manager
-    Id: donjayamanne.python-environment-manager
-    Description: View and manage Python environments & packages.
-    https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-environment-manager
-    ```
 
+- autopep8
+  ```
+  Name: autopep8
+  Id: ms-python.autopep8
+  Description: Formatting support for Python files using the autopep8 formatter.
+  https://marketplace.visualstudio.com/items?itemName=ms-python.autopep8
+  ```
+- intelliCode
+  ```
+  Name: IntelliCode
+  Id: VisualStudioExptTeam.vscodeintellicode
+  Description: AI-assisted development
+  https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode
+  ```
+- Python
+  ```
+  Name: Python
+  Id: ms-python.python
+  Description: Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more.
+  https://marketplace.visualstudio.com/items?itemName=ms-python.python
+  ```
+- Python Environment Manager
+  ```
+  Name: Python Environment Manager
+  Id: donjayamanne.python-environment-manager
+  Description: View and manage Python environments & packages.
+  https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-environment-manager
+  ```
