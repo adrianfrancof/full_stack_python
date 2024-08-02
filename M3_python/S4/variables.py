@@ -11,8 +11,8 @@ s = 'una variable global'
 
 #las variables locales existen dentro de los bloques de codigo
 # funciones, condicionales (if, else if), bucles (ciclos)
-def f(s):
-    s = 'sustituimos la variable global'
+def f(cualquier_nombre):
+    cualquier_nombre = 'sustituimos la variable global'
     variable_local = 'una variable local'
     print(s)
     
