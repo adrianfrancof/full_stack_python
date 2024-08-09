@@ -13,7 +13,7 @@ estudiantes = {
     'Marta': 50
 }
 
-#acceder a un valor del diccionario, es atraves de su clave o key
+#acceder a un valor del diccionario, es a través de su clave o key
 # nombre_diccionario['clave']
 print(estudiantes['Fulanito']) #20
 
