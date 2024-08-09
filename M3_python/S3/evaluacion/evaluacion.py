@@ -1,4 +1,5 @@
 # importar libreria math
+# import math as matematicas
 import math
 
 # asignacion de variables
