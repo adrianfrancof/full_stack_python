@@ -10,6 +10,6 @@ while True:
     if n > 0:
         break
 
-factorial = math.factorial(n)
+factorial = math.factorial(n) # Calcula el factorial de un número
 
-print(f'El factorial del número {n} es {factorial}')
+print(f'El factorial del número {n} es {factorial}') # Imprime el resultado

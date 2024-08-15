@@ -1,6 +1,6 @@
 # match case
 
-while True:
+while True: #mientras sea verdadero
     opcion = input('Hola bienvenido\n'
                 + 'Seleccione una opción\n'
                 + '1.- Opcion 1\n'
@@ -10,7 +10,7 @@ while True:
                 )
 
 
-    match opcion:
+    match opcion: # cada caso se valida con el valor de la variable
         case '1':
             print('opcion 1')
         case '2':
