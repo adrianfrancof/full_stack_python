@@ -30,7 +30,7 @@ def ingreso_opcion_menu():
                             +'3.- salir\n'
                             +'Ingrese una opcion:')
 
-def validacion(opcion_ingresada):
+def validacion_opcion_ingresada(opcion_ingresada):
      match opcion_ingresada:
             case '1':
                 # Agregar Estudiantes
@@ -46,11 +46,10 @@ def validacion(opcion_ingresada):
             case _ :
                 print('ópcion invalida\n')
             
-
 def menu():      
     while True:
         opcion_ingresada = ingreso_opcion_menu()
-        validacion(opcion_ingresada)
+        validacion_opcion_ingresada(opcion_ingresada)
         
            
 menu() # inicio del programa                
