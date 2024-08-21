@@ -56,3 +56,12 @@ print('La lista ordenada es', lista)
 lista_ordenada = sorted(lista)
 print('La lista ordenada es', lista_ordenada)
 
+# desempaquetar una lista, tiene que ser la misma cantidad de variables que elementos de la lista
+# Genera error ValueError: too many values to unpack, si existen menos o mas elementos que variables
+edad, altura, nombre, apellido = otra_lista # [40, 1.80, 'Fulanito', 'Perez']
+
+# edad = otra_lista[0]
+print('La edad es', edad)
+print('La altura es', altura)
+print('El nombre es', nombre)
+print('El apellido es', apellido)
