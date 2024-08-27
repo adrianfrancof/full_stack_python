@@ -7,15 +7,15 @@ def restar(a: int, b: int):
 def multiplar(a , b = 1):
     return a * b
 
-def division(a, b):
+def division(a, b) -> int:
     if b == 0:
         # raise ZeroDivisionError('No se puede dividir por cero')
-        return 'No se puede dividir por cero'
+        return 0
     else:
         return a / b
     
 def ingreso_opcion():
-    return input('Ingrese una opcion: \n' 
+    return input('Ingrese una opciÓn: \n' 
                  + '1.- sumar\n'
                  + '2.- restar\n' 
                  + '3.- multiplicar\n' 
@@ -23,8 +23,8 @@ def ingreso_opcion():
                  + '5.- salir\n')
     
 def ingreso_valores_a_calcular():    
-    num_uno = ingreso_numero('ingrese el primero: ')
-    num_dos = ingreso_numero('ingrese el segundo: ')       
+    num_uno = ingreso_numero('ingrese el primer numero: ')
+    num_dos = ingreso_numero('ingrese el segundo numero: ')       
     return (num_uno, num_dos)
 
 def ingreso_numero(mensaje):
@@ -51,7 +51,7 @@ def verificar_opcion(opcion_ingresada):
             return division(num_uno, num_dos)
          case '5':
             return None
-         case _:
+         case  _ :
             return 'Opción invalida'
 
 def verificar_resultado(resultado):
