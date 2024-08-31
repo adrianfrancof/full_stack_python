@@ -1,0 +1,12 @@
+Animal:
+	nombre : str
+	edad   : int
+	raza   : str
+	peso   : int
+
+
+# si se necesita herencia
+Caballo(Animal):
+
+
+Leon(Animal):
