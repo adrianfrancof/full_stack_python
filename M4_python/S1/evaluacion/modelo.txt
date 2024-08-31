@@ -1,0 +1,30 @@
+#super clase (padre)
+Persona:
+	id	 : int
+	nombre   : str
+	apellidos: str
+	edad	 : int
+
+	concentrarse()
+	viajar()
+
+# sub clase (hija)
+Futbolista(Persona):
+	dorsal 	    : int
+	demarcacion : str
+	
+	jugar_partido()
+	entrenar()
+	
+
+Entrenador(Persona):
+	id_federacion  : str
+
+	dirigir_partido()
+	dirigir_entrenamiento()
+
+Masajista(Persona):
+        titulacion       : str
+        annos_experiencia : int
+
+	dar_masajes()
