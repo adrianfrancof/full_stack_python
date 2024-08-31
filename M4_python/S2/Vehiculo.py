@@ -22,6 +22,37 @@ class Vehiculo:
         self.ancho = ancho
         self.alto = alto
         
+    #accesadores o mutadores, se usan para modificar los atributos del objeto
+    def get_marca(self):        # vehiculo.get_marca()
+        return self.marca
+    
+    def set_marca(self, marca):   # vehiculo.set_marca('Toyota')
+        self.marca = marca
+        
+    def get_color(self):          # vehiculo.get_color()
+        return self.color
+    
+    def set_color(self, color):   # vehiculo.set_color('Rojo')
+        self.color = color
+        
+    def get_modelo(self):         # vehiculo.get_modelo()
+        return self.modelo
+    
+    def set_modelo(self, modelo): # vehiculo.set_modelo('Corolla')
+        self.modelo = modelo
+        
+    def get_peso(self):           # vehiculo.get_peso()
+        return self.peso
+    
+    def set_peso(self, peso):     # vehiculo.set_peso('1500')
+        self.peso = peso
+        
+    def get_ancho(self):          # vehiculo.get_ancho()
+        return self.ancho
+    
+    def set_ancho(self, ancho):   # vehiculo.set_ancho('1500')
+        self.ancho = ancho
+        
     def arrancar(self):
         print(f'El vehiculo {self.marca} {self.modelo} arranco')
         
@@ -52,7 +83,13 @@ class Vehiculo:
 vehiculo = Vehiculo('BMW', 'Blanco', 'M3', '1500', '2', '1.5')
 vehiculo.color = 'Rojo' # set asignando valor a un atributo
 print(vehiculo.color)   # get accediendo imprimiendo el valor del atributo
-print(id(vehiculo))
+print(id(vehiculo))     # id devuelve la referencia en memoria del objeto
+
+
+# accediendo a los atributos con metodos accesadores (get) y mutadores (set)
+vehiculo.set_color('Azul')     # set asignando valor a un atributo
+print(vehiculo.get_color())    # get accediendo imprimiendo el valor del atributo
+
 
 # instancia de Vehiculo sin parametros, se omiten los atributos
 vehiculo_uno = Vehiculo()
@@ -62,6 +99,11 @@ vehiculo_uno.modelo = 'Aveo'     # asignando los atributos del objeto
 vehiculo_uno.peso = '1500'       # asignando los atributos del objeto
 vehiculo_uno.ancho = '2'         # asignando los atributos del objeto
 print(id(vehiculo_uno))
+
+# accediendo a los atributos con metodos accesadores (get) y mutadores (set)
+vehiculo_uno.set_marca('Chevrolet')      # set asignando valor a un atributo
+vehiculo_uno.set_color('Negro')          # set asignando valor a un atributo
+vehiculo_uno.set_modelo('Aveo')          # set asignando valor a un atributo
 
 # instancia de Vehiculo invocando al constructor con parametros
 # class Vehiculo(
