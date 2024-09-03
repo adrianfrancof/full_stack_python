@@ -13,4 +13,4 @@ class Cuenta:
         
         
 persona = Persona(1,'Fulanito','Perez', 35)
-cuenta  = Cuenta(1000,0,1)        
+cuenta  = Cuenta(1000,0,1)
