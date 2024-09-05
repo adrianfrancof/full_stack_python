@@ -13,3 +13,8 @@ class Supervisor(Persona):
     @area.setter          # set
     def area(self, area):
         self._area = area
+    
+    # sobreescritura de método    
+    def get_tipo(self):
+        print(f'Soy del tipo \n{self}')
+        print(type(self))    
