@@ -16,7 +16,7 @@ Username [postgres]: postgres
 Contraseña para usuario postgres: <PASSWORD> al instalar la base de datos
 
 -----------------------------------------------
--- Conectarse a la base de dato desde cualquier terminal
+-- Conectarse a la base de datos desde cualquier terminal, necesario tener las variables de entorno
 -----------------------------------------------
 psql -U {username} -W -d {database_name}
 psql -U postgres -W -d postgres
