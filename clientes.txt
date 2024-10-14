@@ -1,2 +1,0 @@
-Cliente(nombre=Fulanito, apellido=Perez, rut=1-8, descuento=0.1)
-Cliente(nombre=Maria, apellido=Puig, rut=1-9, descuento=0.1)

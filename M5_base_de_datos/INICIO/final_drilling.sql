@@ -1,0 +1,2 @@
+-- Subir el ejercico en un archivo comprimido
+-- El archivo donde se realicen las query sql con extensión .txt
