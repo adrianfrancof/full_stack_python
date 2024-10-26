@@ -1,5 +1,10 @@
 * URL: crear path para la ruta editar_libro/
 > app/urls.py
+```
+urlpatterns = [
+    path('editar_libro/<int:libro_id>', editar_libro, name="editar_libro") # registrando ruta para editar libro
+]
+```
 
 * Template: editar listar_libros.html y agregar boton para editar un libro que comunica con el path editar_libro/id
 
