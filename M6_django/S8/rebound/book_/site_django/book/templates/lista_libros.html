@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% load bootstrap5 %}
+{% block content %}
+    <section class="container mt-5">
+        <h2>Lista Libros</h2>
+        <!-- {# Display django.contrib.messages as Bootstrap alerts #} -->
+        {% bootstrap_messages %}
+        {% if libros %}
+        <!-- tabla con libros -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Valoración</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for libro in libros %}
+            <tr>
+              <td>{{ libro.id }}</td>
+              <td>{{ libro.titulo }}</td>
+              <td>{{ libro.autor }}</td>
+              <td>{{ libro.valoracion }}</td>
+              <td>  
+                <a class="btn" href="{% url 'editar_libro' libro_id=libro.id %}" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
+                  <i class="fa fa-edit text-primary"></i>
+                </a>
+                <a class="btn" href="{% url 'eliminar_libro' libro_id=libro.id %}" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                  <i class="fa fa-edit text-danger"></i>
+                </a>
+              </td>
+            </tr>
+          {% empty %}
+            <tr>
+                <td colspan="4">No hay libros disponibles</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <!-- No hay libros -->
+        <p>No hay libros disponibles</p>
+        {% endif %}
+
+    </section>
+{% endblock %}

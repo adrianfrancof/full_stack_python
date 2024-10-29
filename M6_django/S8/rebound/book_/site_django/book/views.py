@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
 from .models import Book
 from .forms import BookForm
 
@@ -49,3 +50,17 @@ def eliminar_libro(request, libro_id):
     book.delete() # eliminando el libro de la base de datos
     messages.info(request, 'Libro eliminado correctamente') # muestra un mensaje
     return redirect('lista_libros')  # redirecciona a lista de libros
+
+def registro(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Registro éxitoso')
+            return redirect('lista_libros') # cambiar a login
+        else:
+            messages.error(request, 'Módifica los datos de ingreso')
+            return HttpResponseRedirect(reverse('registro'))
+    else:
+        form = UserCreationForm()
+        return render(request, 'registro.html', {'form': form})
