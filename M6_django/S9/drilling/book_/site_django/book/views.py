@@ -63,7 +63,7 @@ def registro(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save() # guardando los datos del usuario en una variable
+            user = form.save(commit=False) # guardando los datos del usuario en una variable
             
             content_type = ContentType.objects.get_for_model(Book)
             permission = Permission.objects.get(
@@ -72,6 +72,7 @@ def registro(request):
             )
             
             user.user_permissions.add(permission)
+            user.save() # guardando los datos del usuario en la base de datos
             
             messages.success(request, 'Registro éxitoso')
             return redirect('login')
