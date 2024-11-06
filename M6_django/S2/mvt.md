@@ -8,7 +8,7 @@
 
 > Modelos: Los modelos son objetos de Python que definen la estructura de los datos de una aplicación y proporcionan mecanismos para administrar (agregar, modificar, eliminar) y consultar registros en la base de datos.
 
-> Plantillas: Una plantilla es un archivo de texto que define la estructura o el diseño de un archivo (como una página HTML), con marcadores de posición utilizados para representar el contenido real. Una vista puede crear dinámicamente una página HTML mediante una plantilla HTML, rellenándola con datos de un modelo. Una plantilla se puede utilizar para definir la estructura de cualquier tipo de archivo; ¡No tiene que ser HTML!
+> Plantillas: Una plantilla es un archivo de texto que define la estructura o el diseño de un archivo (como una página HTML), con marcadores de posición utilizados para representar el contenido real. Una vista puede crear dinámicamente una página HTML mediante una plantilla HTML, rellenándola con datos de un modelo. Una plantilla se puede utilizar para definir la estructura de cualquier tipo de archivo; ¡No tiene que ser HTML! 
 
 ![1729005564304](image/mvt/1729005564304.png)
 ![1729005569149](image/mvt/1729005569149.png)

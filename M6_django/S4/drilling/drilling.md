@@ -1,9 +1,13 @@
 1. Crear la carpeta template.
+
 > book/template/
 
-2. Proceder a crear nuestro archivo index.html. 
+2. Proceder a crear nuestro archivo index.html.
+
 > book/templates/index.html
+
 * `html:5`
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -19,14 +23,18 @@
 ```
 
 3. Adecuar la vista views.py.
-> crear en book/views.py
+
+> crear en book/views.py 
+
 ```
 class IndexPageView(TemplateView):
     template_name = 'index.html'
 ```
 
 4. Configuración del Path /URLs.
+
 > book/urls.py
+
 ```
 urlpatterns = [
     # path('', views.index, name='index'),

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <section class="container mt-5">
+        <h2 class="text-center">Editar libro</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="{% url 'editar_libro' libro_id=libro_id %}" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Guardar" class="btn btn-primary w-100">
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

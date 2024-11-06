@@ -14,7 +14,7 @@ python -m venv .venv
 * instalar django en el entorno si no éxiste
 
 ```
-pip install Django==5.1.2
+pip install Django==5.1.2 
 ```
 
 * crear proyecto django
@@ -29,7 +29,7 @@ django-admin startproject nombre_proyecto
 django-admin startapp nombre_app
 ```
 
-* registrar cada app en el archivo settings.py que se encuentra deltro de la carpeta del proyecto
+* registrar cada app en el archivo settings.py que se encuentra dentro de la carpeta del proyecto
 
 ```
 INSTALLED_APPS = [

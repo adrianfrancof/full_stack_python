@@ -9,7 +9,7 @@
 python --version
 ```
 
-######  verificando el entorno o directorio donde se encuentra instalado python
+###### verificando el entorno o directorio donde se encuentra instalado python
 
 ```
 python -c "import sys; print(sys.executable)"
@@ -61,5 +61,5 @@ Id: tushortz.python-extended-snippets
 Description: Python Extended is a vscode snippet that makes it easy to write codes in python by providing completion options along with all arguments.
 Version: 0.0.1
 Publisher: Taiwo Kareem
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tushortz.python-extended-snippets
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tushortz.python-extended-snippets 
 ```

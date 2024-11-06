@@ -1,13 +1,13 @@
 * copiar proyecto anterior o crear uno con todas las configuraciones necesarias
-
 * eliminar templates
+
 > book/templates/index.html
 > book/templates/espalindromo.html
 
 * eliminar métodos de views.py, solo dejar IndexPageView
-
 * eliminar los path creados en urls.py de la aplicación book
-solo dejar
+  solo dejar
+
 ```
 urlpatterns = [
     path('', IndexPageView.as_view(),name="index"),
@@ -15,8 +15,8 @@ urlpatterns = [
 ```
 
 * estructura de templates a crear
-base.html -> estructura base
-	include: navbar.html -> barra de navegacion
+  base.html -> estructura base
+  include: navbar.html -> barra de navegacion
 
 layout.html -> template a reutilizar
 	extends: base.html -> estructura base
@@ -31,12 +31,11 @@ layout.html
 index.html
 
 * activar el entorno o usar entorno global
-
 * instalar en el entorno bootstrap 5
-https://django-bootstrap5.readthedocs.io/en/latest/installation.html
-pip install django-bootstrap-v5
-
+  https://django-bootstrap5.readthedocs.io/en/latest/installation.html
+  pip install django-bootstrap-v5
 * registrar el uso de bootstrap 5 como app en settings.py
+
 ```
 INSTALLED_APPS = [
     'bootstrap5',
@@ -44,19 +43,25 @@ INSTALLED_APPS = [
 ```
 
 * crear archivo navbar.html dentro de la carpeta templates
+
 > templates/navbar.html
 
 * crear archivo base.html dentro de la carpeta templates
+
 > templates/base.html
 
 * crear archivo layout.html que extiende de base.html dentro de la carpeta templates
->templates/layout.html
+
+> templates/layout.html
 
 * crear archivo index.html que extiende layout.html dentro de la carpeta templates
+
 > templates/index.html
 
 * Ruta: agregar al archivo urls.py dentro de la app, la estructura necesaria para listar los libros
+
 > book/urls.py
+
 ```
 urlpatterns = [
     path('', IndexPageView.as_view(),name="index"),
@@ -65,10 +70,11 @@ urlpatterns = [
 ```
 
 * Controlador: en el archivo views.py agregar una función que despliegue una lista de libros
-
 * Model: crear un modelo para los libros
+
 > https://docs.djangoproject.com/en/5.1/topics/db/models/
 > https://www.w3schools.com/django/django_models.php
+
 ```
 class Book(models.Model):
     # atributos
@@ -78,7 +84,9 @@ class Book(models.Model):
 ```
 
 * Template: crear template, crear un archivo html para listar los libros
+
 > templates/lista_libros.html
+
 ```
 {% extends 'layout.html' %}
 
@@ -121,6 +129,6 @@ class Book(models.Model):
 ```
 
 * Realizar migraciones
-`python manage.py makemigrations book`
-`python manage.py sqlmigrate book 0001`
-`python manage.py migrate`
+  `python manage.py makemigrations book`
+  `python manage.py sqlmigrate book 0001`
+  `python manage.py migrate`
