@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import requires_csrf_token, csrf_protect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Permission, User
@@ -17,6 +18,7 @@ class IndexPageView(TemplateView): # un view o controlador con una clase
     template_name = 'index.html'
 
 @login_required # para que solo se pueda acceder si esta logeado
+@requires_csrf_token
 def lista_libros(request):
     libros = Book.objects.all()
     return render(request, 'lista_libros.html', {'libros': libros})
@@ -24,6 +26,7 @@ def lista_libros(request):
 # https://docs.djangoproject.com/en/5.1/topics/http/shortcuts/
 # https://www.geeksforgeeks.org/get_object_or_404-method-in-django-models/
 @login_required
+@requires_csrf_token
 def crear_libro(request):
     if request.method == 'POST': # si el metodo es POST
         form = BookForm(request.POST)
@@ -38,7 +41,8 @@ def crear_libro(request):
         form = BookForm()
         return render(request, 'crear_libro.html', {'form': form})
 
-@login_required    
+@login_required
+@requires_csrf_token    
 def editar_libro(request, libro_id):
     book = get_object_or_404(Book, pk = libro_id) # obteniendo el libro a editar en la db o status 404 not found
     if request.method == 'POST':
@@ -56,7 +60,8 @@ def editar_libro(request, libro_id):
         form = BookForm(instance=book) # instancia del formulario con los datos del libro a editar
         return render(request, 'editar_libro.html', {'form': form, 'libro_id': libro_id}) # renderiza la vista para editar el libro
 
-@login_required    
+@login_required
+@requires_csrf_token    
 def eliminar_libro(request, libro_id):
     book = get_object_or_404(Book, pk=libro_id) # obteniendo el libro a eliminar en la db o status 404 not found
     book.delete() # eliminando el libro de la base de datos
@@ -100,11 +105,13 @@ def iniciar_sesion(request):
             return HttpResponseRedirect(reverse('login'))
     else:
         return render(request, 'login.html')    
-    
+
+@csrf_protect   
 def home_page(request):
     return render(request, 'index.html')
 
 @login_required
+@requires_csrf_token    
 def cerrar_sesion(request):
     logout(request) # cierra la sesión del usuario
     return render(request, 'index.html')

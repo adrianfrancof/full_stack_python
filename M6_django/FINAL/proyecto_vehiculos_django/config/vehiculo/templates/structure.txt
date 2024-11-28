@@ -1,0 +1,18 @@
+base.html -> estructura base
+	include: navbar.html -> barra de navegación
+    include: footer.html -> pie de página
+
+layout.html -> template a reutilizar
+	extends: base.html -> estructura base
+
+index.html -> página principal
+	extends: layout.html -> template a reutilizar
+
+lista_vehiculos.html -> página para listar vehiculos
+    extends: layout.html -> template a reutilizar
+
+crear_vehiculo.html -> página de creación
+    extends: layout.html -> template a reutilizar
+
+editar_vehiculo.html -> página de edición
+    extends: layout.html -> template a reutilizar
