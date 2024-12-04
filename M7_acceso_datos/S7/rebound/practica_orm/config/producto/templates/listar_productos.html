@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% load bootstrap5 %}
+{% block content %}
+    <section class="container mt-5">
+        <h2>Lista productos</h2>
+        <!-- {# Display django.contrib.messages as Bootstrap alerts #} -->
+        {% bootstrap_messages %}
+        {% if productos %}
+        <!-- tabla con productos -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for temp in productos %}
+            <tr>
+              <td>{{ temp.id }}</td>
+              <td>{{ temp.nombre }}</td>
+              <td>{{ temp.precio }}</td>
+              <td>{{ temp.descripcion }}</td>
+              <!-- <td>  
+                <a class="btn" href="{% url 'editar_producto' producto_id=producto.id %}" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
+                  <i class="fa fa-edit text-primary"></i>
+                </a>
+                <a class="btn" href="{% url 'eliminar_producto' producto_id=producto.id %}" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                  <i class="fa fa-edit text-danger"></i>
+                </a>
+              </td> -->
+            </tr>
+          {% empty %}
+            <tr>
+                <td colspan="4">No hay productos disponibles</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <!-- No hay productos -->
+        <p>No hay productos disponibles</p>
+        {% endif %}
+
+    </section>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section class="container mt-5">
+    <h2 class="text-center">Editar Producto</h2>
+    <div class="row justify-content-center">
+        <form action="{% url 'editar_producto' producto_id=producto_id %}" method="post">
+            {% csrf_token %}
+            {{ producto_form.as_p }}
+        </form>
+    </div>
+</section>
+{% endblock %}
